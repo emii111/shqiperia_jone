@@ -20,7 +20,7 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
 </head>
-<!-----------------------------------Nav---------------------------------------->
+<!-----------------------------------Nav component---------------------------------------->
 <header>
     
         <a href="Shqiperiajone.php">Shqiperia jone</a>
