@@ -1,0 +1,156 @@
+/* Butoni i hapjes */
+.book-btn {
+    padding: 10px 20px;
+    background: #cc0512;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #cc0512 !important; 
+    border-radius: 18px !important;
+    background-color: #fff;
+    color: #cc0512 !important;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+    background-color: #cc0512;
+    color: white !important;
+    transform: scale(1.05);
+}
+.form input{
+    max-height: 650px;
+    padding: 0;
+}
+
+/* Sfondi i modalit */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* ndihmon në ekranet e vogla */
+    z-index: 9999;
+
+}
+
+/* Modal Box */
+.modal-content {
+    background: #fff;
+    padding: 10px;
+    width: 90%;            /* responsive */
+    max-width: 450px;      /* për desktop */
+    border-radius: 10px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+    max-height: 650px;
+}
+
+/* Close button X */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Form */
+form label {
+    display: block;
+    margin-top: 2px;
+   
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 2px;
+    margin-top: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 70px;
+    resize: none;
+}
+
+.actions {
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.confirm-btn, .cancel-btn {
+    flex: 1; /* bën butonat fleksibël në ekrane të vogla */
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background: #28a745;
+    color: white;
+}
+
+.cancel-btn {
+    background: #cc0512;
+    color: white;
+}
+
+/* Animacion */
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+/* 📱 Responsive për ekrane shumë të vegjël (deri 320px) */
+@media (max-width: 360px) {
+    .modal-content {
+        padding: 7px;
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .confirm-btn, .cancel-btn {
+        width: 100%;
+    }
+}
+
+/* 💻 Responsive për ekrane të mëdha 1360px+ */
+@media (min-width: 1360px) {
+    .modal-content {
+        max-width: 550px; /* më e madhe në desktop */
+   
+    }
+
+    form input, form textarea {
+        padding: 6px;
+        font-size: 8px;
+    }
+
+    .actions button {
+        padding: 14px;
+        font-size: 16px;
+    }
+}

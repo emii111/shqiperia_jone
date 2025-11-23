@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif !important;
+  background-color: #fff !important;
+  background-size: cover;
+  color: #fff;
+}
+
+/* ikonaaaaaaaaaaaaa      */
+.user-icon a {
+  color: #cc0512 !important;
+  font-size: 1.2rem;
+  margin-left: 1.2rem;
+  transition: 0.3s;
+}
+
+.user-icon a:hover {
+  color: #fff;
+}
+
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px 50px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+  header a {
+    text-decoration: none;
+    color: #cc0512 !important; 
+    font-weight: 600;
+}
+
+
+
+
+
+
+/*foto panomarike provaaa*/
+
+.heros {
+
+  display: flex;
+  flex-direction: column;
+  /* që h1 të jetë mbi p */
+  justify-content: center;
+  /* qendron vertikalisht */
+  align-items: center;
+  /* qendron horizontalisht */
+  height: 550px;
+  margin-top: 70px;
+  margin-bottom: 120px;
+  overflow: hidden;
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url('../foto/albania1.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-weight: 900;
+}
+
+.heros h1 {
+  font-size: 70px;
+  font-family: 'Times New Roman', Times, serif;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Teksti poshtë nga e djathta */
+.heros p {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 1.5s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+
+
+/* Animacionet */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*-------fillimi i shteteve qe operojme*/
+/* 0 -768px */
+@media (max-width: 768px) {
+  .product-list {
+    display: block;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+
+
+
+
+
+.popular {
+  text-align: center;
+  padding: 3rem 1rem 1rem 1rem;
+  margin-top: 120px;
+}
+
+.popular h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0a1d5d;
+  margin-bottom: 0.5rem;
+}
+
+.popular p {
+  font-size: 1rem;
+  color: #666;
+  max-width: 600px;
+  margin: auto;
+}
+
+
+
+
+/*---------------------------------REKLAMA-----------------------------------------------*/
+
+.hero-sections {
+
+  color: #cc0512;
+  text-align: center;
+  padding: 150px 20px;
+  background-color: #fff;
+  padding-bottom: 100px;
+
+}
+
+.hero-content h1 {
+  color: #cc0512;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  color: #333;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.contact-infos {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.contact-item i {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+strong {
+  display: block;
+  margin-top: 5px;
+}
+
+
+/*---------------------------------REKLAMA-2----------------------------------------------*/
+.containe {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1 .containe {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h1 span {
+  color: #cc0512;
+}
+
+p.subtitle {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: #555;
+}
+
+.gridss {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cardss {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 30px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardss:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.iconss {
+  background-color: #fff;
+  border: 2px solid #cc0512;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.cardss h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+
+.cardss p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+
+/*  ===============================Slidding Photos======================================  */
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+/* Track i gjatë që lëviz */
+.slide-track {
+  display: flex;
+  width: calc(350px * 16);
+  /* 16 foto (8 + 8) */
+  animation: scroll 45s linear infinite;
+  /* shpejtësia */
+  gap: 20px;
+  /* opsionale, por e bën layout më të rregullt */
+  display: flex;
+
+}
+
+.slide-track {
+  width: calc(500px * 16);
+  /* gjerësia e re × 16 */
+}
+
+
+/* RREGULLON SHPEJTËSINË
+   - më ngadalë → rrit numrin (p.sh. 80s)
+   - më shpejt → ul numrin (p.sh. 25s)
+*/
+
+/* 1 slide */
+.slide {
+  width: 550px;
+  height: 350px;
+  position: relative;
+
+  margin-right: 20px;
+  /* ose çdo vlerë që dëshiron */
+
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: none;
+  transition: none;
+}
+
+
+
+
+/* Overlay text */
+.slide span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Infinite scroll pa u kthyer mbrapa */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .slider {
+    height: 250px;
+  }
+
+  .slide {
+    width: 250px;
+    height: 250px;
+  }
+
+  .slide-track {
+    width: calc(250px * 16);
+  }
+}
+
+@media(max-width: 480px) {
+  .slider {
+    height: 170px;
+  }
+
+  .slide {
+    width: 170px;
+    height: 170px;
+  }
+
+  .slide-track {
+    width: calc(170px * 16);
+  }
+}

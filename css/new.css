@@ -1,0 +1,243 @@
+/* Struktura bazë e faqes */
+
+
+/* Kontejneri i seksionit të kartave */
+.card-section {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Kontejneri i të gjitha kartave (3 për rresht) */
+.card-container {
+    display: flex;
+    grid-template-columns: repeat(3, 300px);
+    gap: 25px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Karta individuale */
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 340px;
+    cursor: pointer;
+    flex-shrink: 0;
+    /* mos u zvogëlo kur s’ka hapësirë */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+     min-height: 540px; 
+   
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* zmadhohet pak */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imazhi i kartës */
+.image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Shenja e çmimit sipër imazhit */
+.price-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fff;
+    color: #cc0512;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Përmbajtja e kartës */
+.card-content {
+    padding: 20px 20px;
+}
+
+.card-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #222;
+}
+
+/* Info (ikonat me ditët, njerëzit, datat) */
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    gap: 10px;
+
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Tags (vendet) */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.tags span {
+    background-color: #eef6f2;
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: #2d8659;
+}
+
+/* Seksioni i çmimit dhe butonit */
+.price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #cc0512;
+
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 5px;
+}
+
+.per-person {
+    margin: 4px 0 0 0;
+    font-size: 12px;
+    color: #666;
+
+}
+
+/* Butoni "Book Now" */
+.book-btn {
+
+    border: 2px solid #cc0512 !important; /* ngjyra e kufirit */
+    border-radius: 18px !important;/* për korniza të rrumbullakosura */
+    background-color: #fff;
+    color: #cc0512 !important;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn :hover {
+    background-color: #cc0512;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+
+.view-all-containers {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.view-all-btn {
+    background-color: #fff;
+    border: 2px solid #cc0512;/* ngjyra e kufirit */
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 14px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    
+}
+
+.view-all-btn:hover {
+    color: #cc0512;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width: 700px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        width: 300px;
+    }
+}
+
+/* PËR EKRANE TË VOGLA */
+@media (max-width: 900px) {
+    .card-container {
+        flex-wrap: wrap;
+        /* kartat kalojnë në disa rreshta në mobile */
+        justify-content: center;
+    }
+}
+
+/*hero  */
+
+body {
+  background: #f7fdfb;
+  color: #333;
+}
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding-top: 150px;
+  background: #f2fffb;
+}
+
+.hero .discover {
+  color: #10a37f;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.hero .highlight {
+  color: #10a37f;
+}
+
+.hero p {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+}
+
+

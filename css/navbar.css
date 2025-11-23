@@ -1,0 +1,163 @@
+/* ====== RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  
+    overflow-x: hidden;
+}
+
+/* ====== HEADER / NAVBAR ====== */
+header {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-icon a{ 
+    color:#cc0512;
+}
+
+/* LOGO - "Shqiperia Jone" */
+header a[href="Shqiperiajone.html"] {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:#cc0512;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* NAV LIST */
+#nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+#nav-list li a,
+#nav-list li button {
+    text-decoration: none;
+    background-color: #fff;
+    color: #10a37f;;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#nav-list li a:hover,
+#nav-list li button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* ====== MENU TOGGLE (MOBILE) ====== */
+
+.menu-toggle {
+    width: 30px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #10a37f;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+
+
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between; /* logo në majtë, menu/user në djathtë */
+        align-items: center;
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+    }
+
+    /* Logo në majtë */
+    header a[href="Shqiperiajone.html"] {
+        order: 0; /* gjithmonë e para */
+    }
+
+    /* Menu Toggle (burger) */
+    .menu-toggle {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        margin-left: 15px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* User Icon */
+    .user-icon {
+        order: 2;
+        display: flex;
+        align-items: center;
+        margin-left: 0.5rem; /* pak hapsire nga burger */
+    }
+
+    /* Nav List (dropdown menu) */
+    #nav-list {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        width: 200px;
+        text-align: left;
+        display: none;
+        gap: 1rem;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    #nav-list.active {
+        display: flex;
+    }
+}
