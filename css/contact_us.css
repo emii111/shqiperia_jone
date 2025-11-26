@@ -3,6 +3,10 @@
       padding: 0;
       box-sizing: border-box;
     }
+    /* madhesia e shqiperia jone */
+.logoja{
+  font-size: 30px !important;
+}
 
     body {
       font-family:'Times New Roman', Times, serif !important ;

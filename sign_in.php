@@ -3,7 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Login / Sign Up Responsive</title>
+     <link rel="stylesheet" type="text/css" href="css/navbar.css">
+     <link rel="stylesheet" type="text/css" href="css/footer.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <title>Login / Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -11,14 +18,19 @@
             font-family: 'Times New Roman', Times, serif;
             background: linear-gradient(135deg, #ff95bd, #cc0512);
             min-height: 100vh;
-            display: flex;
+            display: inline;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 0;
             margin: 0;
+            padding-left: 0rem;
         }
+        
+        .logoja{
+         font-size: 30px !important;
+         }
 
-        .container {
+        .containerr {
             display: flex;
             gap: 50px;
             align-items: center;
@@ -26,6 +38,8 @@
             flex-wrap: wrap;
             max-width: 1200px;
             width: 100%;
+            padding-top: 100px;
+            padding-bottom: 50px;
         }
 
         .form-box {
@@ -129,8 +143,34 @@
 </head>
 
 <body>
+     <header>
 
-    <div class="container">
+        <a href="Shqiperiajone.php" class="logoja">Shqiperia jone</a>
+
+        <nav>
+            <ul id="nav-list">
+                <li><a href="new.php">Tours</a></li>
+                <li><a href="aboutus.php">About</a></li>
+                <li><a href="contact_us.php">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-icon">
+            <a href="sign_in.php">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+    </header>
+   
+    
+   
+
+
+    <div class="containerr">
 
         <!-- LOGIN FORM -->
         <form class="form-box" action="login_process.php" method="POST" id="login-box" onsubmit="return validateLogin()">
@@ -164,6 +204,61 @@
         </form>
 
     </div>
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Our Company</h4>
+                    <ul>
+                        <li><a href="#">Our History</a></li>
+                        <li><a href="#">Our Tours</a></li>
+                        <li><a href="#">Our Work</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Clients</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#">email</a></li>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">Our socials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fa fa-facebook-f"></i> </a>
+                        <a href=""><i class="fa fa-instagram"></i> </a>
+                        <a href=""><i class="fa fa-youtube"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="footerBottom">
+            <p>&copy; 2025 Shqiperia Jone. Te gjitha te drejtat te rezervuara.</p>
+        </div>
+    </footer>
+
+
+     <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navList = document.getElementById("nav-list");
+
+    menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navList.classList.toggle("active");
+    });
+ </script>
 
     <script>
         function showSignup() {

@@ -1,5 +1,7 @@
-/* Struktura bazë e faqes */
-
+/* madhesia e shqiperia jone */
+.logoja{
+  font-size: 30px !important;
+}
 
 /* Kontejneri i seksionit të kartave */
 .card-section {
@@ -239,5 +241,4 @@ body {
   margin: 0 auto 40px;
   font-size: 1.1rem;
 }
-
 

@@ -23,7 +23,7 @@
 <!-----------------------------------Nav component---------------------------------------->
 <header>
     
-        <a href="Shqiperiajone.php">Shqiperia jone</a>
+        <a href="Shqiperiajone.php" class="logoja">Shqiperia jone</a>
 
         <nav>
             <ul id="nav-list">
@@ -70,7 +70,7 @@
           <div class="content">
             <h3> Aktiviteti i Shqiperia Jonë ka nisur që në vitin 1992.</h3>
 
-            <p>transportin për herë të parë nga qyteti i Tiranes, vizionin dhe dëshirën për të ofruar dhe
+            <p>Transportin për herë të parë nga qyteti i Tiranes, vizionin dhe dëshirën për të ofruar dhe
               mundësuar një udhetim jo vetëm të rehatshëm por dhe me çmime të përballueshme. Mbas 20 vitesh, ne vitin
               2012 krijohet agjensia e mirëfilltë turistike. Në vitin 2016, përveç udhëtimeve tokësore, agjensia
               jonë i mundësoi miqve tanë udhëtarë, mundësinë e udhëtimeve të organizuara me avion dhe paketat
@@ -161,7 +161,7 @@
         <div class="footer-col">
           <h4>Contact Us</h4>
           <ul>
-            <li><a href="#">email: shqiperiajone@gmail.com</a></li>
+            <li><a href="#">email</a></li>
             <li><a href="#">+355 66 234 2345</a></li>
             <li><a href="#">our socials</a></li>
           </ul>

@@ -26,6 +26,26 @@ if (mysqli_query($conn, $sql_create_table_users)) {
 } else {
     echo "<br> Error creating table users: <br>" . mysqli_error($conn);
 }
+$sql_create_table_reservation = "CREATE TABLE reservation(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    first_name VARCHAR(250),
+    last_name VARCHAR(250),
+    email VARCHAR(250),
+    phone VARCHAR(250),
+    preferred_date DATE,
+    guests INT,
+    requests TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
+if (mysqli_query($conn, $sql_create_table_reservation)) {
+    echo "<br> Table reservation created succesfully";
+} else {
+    echo "<br> Error creating table reservation: <br>" . mysqli_error($conn);
+}
 
 // $sql_create_table_product_courses = "CREATE TABLE courses(
 //     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

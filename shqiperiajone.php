@@ -37,7 +37,7 @@
     <!-------------------------------------------------------------------------header---------------------------------------------------------------------------------->
     <header>
 
-        <a href="Shqiperiajone.php">Shqiperia jone</a>
+        <a href="Shqiperiajone.php" class="logoja">Shqiperia jone</a>
 
         <nav>
             <ul id="nav-list">
@@ -57,6 +57,16 @@
             </div>
 
     </header>
+    <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navList = document.getElementById("nav-list");
+
+    menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navList.classList.toggle("active");
+    });
+</script>
+
 
     <!-----------------------------------------------------------------------HOME PAGE-------------------------------------------------------------------->
     <div class="heros">
@@ -542,7 +552,7 @@
                             2012 krijohet agjensia e mirëfilltë turistike...
                         </p>
                         <div class="button">
-                            <a href="aboutus.php">Read more</a>
+                            <a href="aboutus.php" class="read">Read more</a>
                         </div>
                     </div>
                 </div>

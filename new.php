@@ -29,7 +29,7 @@
 </head>
 <header>
 
-    <a href="Shqiperiajone.php">Shqiperia jone</a>
+    <a href="Shqiperiajone.php" class="logoja">Shqiperia jone</a>
 
     <nav>
         <ul id="nav-list">
@@ -49,6 +49,16 @@
         </div>
 
 </header>
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navList = document.getElementById("nav-list");
+
+    menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navList.classList.toggle("active");
+    });
+</script>
+
 <!------------------------------------------------------------------------------Modal --------------------------------------------------------------------------------->
 <div id="modal" class="modal">
     <div class="modal-content">
@@ -729,7 +739,7 @@
                 <div class="footer-col">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><a href="#">email: shqiperiajone@gmail.com</a></li>
+                        <li><a href="#">email</a></li>
                         <li><a href="#">+355 66 234 2345</a></li>
                         <li><a href="#">our socials</a></li>
                     </ul>

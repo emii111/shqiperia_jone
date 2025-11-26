@@ -67,7 +67,6 @@ footer {
 .footer-col ul li a {
 	font-size: 16px;
 	text-transform: capitalize;
-	
 	text-decoration: none;
 	font-weight: 300;
 	color: black;
@@ -76,8 +75,7 @@ footer {
 }
 
 .footer-col ul li a:hover {
-	color: #bbbbbb
-	 !important;
+	color: #bbbbbb!important;
 	padding-left: 8px;
 }
 

@@ -25,7 +25,7 @@
 
  <header>
     
-        <a href="Shqiperiajone.php">Shqiperia jone</a>
+        <a href="Shqiperiajone.php" class="logoja">Shqiperia jone</a>
 
         <nav>
             <ul id="nav-list">
@@ -137,7 +137,7 @@
         <div class="footer-col">
           <h4>Contact Us</h4>
           <ul>
-            <li><a href="#">email:shqiperiajone@gmail.com</a></li>
+            <li><a href="#">email</a></li>
             <li><a href="#">+355 66 234 2345</a></li>
             <li><a href="#">our socials</a></li>
           </ul>

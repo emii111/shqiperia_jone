@@ -62,9 +62,9 @@ $sql_create_table_reviews = "CREATE TABLE reviews(
     )";
 
 if (mysqli_query($conn, $sql_create_table_students)) {
-    echo "<br> Table students created successfully";
+    echo "<br> Table reservation created successfully";
 } else {
-    echo "<br> Error creating table students: <br>" . mysqli_error($conn);
+    echo "<br> Error creating table reservation: <br>" . mysqli_error($conn);
 }
 
 mysqli_close($conn);

@@ -5,9 +5,11 @@
    background: linear-gradient(135deg bottom, #e8f7f3, #ffffff);
     color: black;
 }
+
 .button{
     margin: 1px;
     padding: 0;
+    font-size: 15px;
     
 }
 

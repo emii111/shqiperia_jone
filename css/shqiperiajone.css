@@ -12,6 +12,9 @@ body {
   background-size: cover;
   color: #fff;
 }
+.logoja{
+  font-size: 30px !important;
+}
 
 /* ikonaaaaaaaaaaaaa      */
 .user-icon a {
@@ -26,21 +29,9 @@ body {
 }
 
 
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: white;
-  padding: 15px 50px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+.read {
+    font-size: 55px;
 }
-  header a {
-    text-decoration: none;
-    color: #cc0512 !important; 
-    font-weight: 600;
-}
-
 
 
 
