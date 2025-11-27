@@ -27,7 +27,7 @@
         }
         
         .logoja{
-         font-size: 30px !important;
+         font-size: 25px !important;
          }
 
         .containerr {
@@ -38,8 +38,8 @@
             flex-wrap: wrap;
             max-width: 1200px;
             width: 100%;
-            padding-top: 100px;
-            padding-bottom: 50px;
+            padding-top: 170px;
+            padding-bottom: 150px;
         }
 
         .form-box {

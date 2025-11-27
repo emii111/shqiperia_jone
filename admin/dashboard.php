@@ -28,7 +28,7 @@ $users = mysqli_query($conn, $select_users);
 // $courses = mysqli_query($conn, $select_reservation);
 
 // // Fetch reviews data from the database
-// $select_students = "SELECT id, name, lastName, email, course_id, fee_paid, absences FROM students";
+// $select_students = "SELECT id, name, last_name, ";
 // $students = mysqli_query($conn, $select_students);
 
 
