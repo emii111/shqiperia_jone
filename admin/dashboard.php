@@ -23,20 +23,20 @@ if (!$conn) {
 $select_users = "SELECT id, first_name, last_name, email, role FROM users";
 $users = mysqli_query($conn, $select_users);
 
-// Fetch reservations data from the database
-// $select_reservation = "SELECT id, name, duration FROM reservation";
-// $courses = mysqli_query($conn, $select_reservation);
+//Fetch reservations data from the database
+$select_reservations = "SELECT id, name, email, preferred_date, guests FROM reservations";
+$reservations = mysqli_query($conn, $select_reservations);
 
-// // Fetch reviews data from the database
-// $select_students = "SELECT id, name, last_name, ";
-// $students = mysqli_query($conn, $select_students);
-
-
-// if ((!$users) || (!$reservation) || (!$reviews)) {
-//     die("Error: " . mysqli_error($conn));
-// }
+ // Fetch reviews data from the database
+ $select_reviews = "SELECT id, name, comment, stars, tour_id, created_at FROM reviews ";
+ $reviews = mysqli_query($conn, $select_reviews);
+if (!$reviews) {
+    die("Error: " . mysqli_error($conn));
+ }
+ $select_products - "SELECT"
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

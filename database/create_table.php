@@ -26,7 +26,9 @@ if (mysqli_query($conn, $sql_create_table_users)) {
 } else {
     echo "<br> Error creating table users: <br>" . mysqli_error($conn);
 }
-$sql_create_table_reservation = "CREATE TABLE reservation(
+
+
+$sql_create_table_reservations = "CREATE TABLE reservations(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     first_name VARCHAR(250),
@@ -36,45 +38,34 @@ $sql_create_table_reservation = "CREATE TABLE reservation(
     preferred_date DATE,
     guests INT,
     requests TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at NULL,
+    uploaded_at NULL
 )";
 
-if (mysqli_query($conn, $sql_create_table_reservation)) {
-    echo "<br> Table reservation created succesfully";
+if (mysqli_query($conn, $sql_create_table_reservations)) {
+    echo "<br> Table reservations created succesfully";
 } else {
-    echo "<br> Error creating table reservation: <br>" . mysqli_error($conn);
+    echo "<br> Error creating table reservations: <br>" . mysqli_error($conn);
 }
 
-// $sql_create_table_product_courses = "CREATE TABLE courses(
-//     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-//     name VARCHAR(255) NOT NULL,
-//     duration VARCHAR(255) NOT NULL
-// )";
 
-// if (mysqli_query($conn, $sql_create_table_product_courses)) {
-//     echo "<br> Table courses created succesfully";
-// } else {
-//     echo "<br> Error creating table courses: <br>" . mysqli_error($conn);
-// }
+$sql_create_table_reviews = "CREATE TABLE reviews(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(255) NOT NULL,
+    comment VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    stars INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deleted_at NULL,
+    uploaded_at NULL)";
 
-// $sql_create_table_students = "CREATE TABLE students(
-//     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-//     firstName VARCHAR(255) NOT NULL,
-//     lastName VARCHAR(255) NOT NULL,
-//     email VARCHAR(255) NOT NULL UNIQUE,
-//     course_id INT NOT NULL,
-//     fee_paid BOOLEAN NOT NULL, 
-//     absences INT,
-//     FOREIGN KEY (course_id) REFERENCES courses(id)
-//     )";
-
-// if (mysqli_query($conn, $sql_create_table_students)) {
-//     echo "<br> Table students created successfully";
-// } else {
-//     echo "<br> Error creating table students: <br>" . mysqli_error($conn);
-// }
+if (mysqli_query($conn, $sql_create_table_reviews)) {
+    echo "<br> Table reviews created successfully";
+} else {
+    echo "<br> Error creating table reviews: <br>" . mysqli_error($conn);
+}
 
 mysqli_close($conn);
 ?>
+
