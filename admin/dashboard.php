@@ -24,16 +24,16 @@ $select_users = "SELECT id, first_name, last_name, email, role FROM users";
 $users = mysqli_query($conn, $select_users);
 
 //Fetch reservations data from the database
-$select_reservations = "SELECT id, name, email, preferred_date, guests FROM reservations";
+$select_reservations = "SELECT id, first_name, email, preferred_date, guests FROM reservations";
 $reservations = mysqli_query($conn, $select_reservations);
 
  // Fetch reviews data from the database
- $select_reviews = "SELECT id, name, comment, stars, tour_id, created_at FROM reviews ";
+ $select_reviews = "SELECT id, first_name, comment, stars, created_at FROM reviews ";
  $reviews = mysqli_query($conn, $select_reviews);
 if (!$reviews) {
     die("Error: " . mysqli_error($conn));
  }
- $select_products - "SELECT"
+
 
 ?>
 

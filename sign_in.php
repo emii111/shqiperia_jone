@@ -36,7 +36,7 @@
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            max-width: 1200px;
+            max-width: 1360px;
             width: 100%;
             padding-top: 170px;
             padding-bottom: 150px;
