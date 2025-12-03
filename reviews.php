@@ -69,7 +69,7 @@
             <!-- Produkti / turi i lidhur -->
             <input type="hidden" name="tour_id" value="1000">
 
-            <!-- Emri i recensuesit -->
+            <!-- Emri i klientit -->
             <input type="text" name="name" placeholder="Your Name" required>
 
             <label>Rating:</label>

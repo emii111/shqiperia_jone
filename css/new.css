@@ -8,6 +8,10 @@
     display: grid;
     justify-content: center;
     margin-bottom: 40px;
+    width: 100%;
+    max-width: 1200px; /* opsionale – kufizon seksionin */
+    margin-right: auto;  /* e qendron seksionin */
+    margin-left: auto;
 }
 
 /* Kontejneri i të gjitha kartave (3 për rresht) */
@@ -26,21 +30,19 @@
     overflow: hidden;
     width: 340px;
     cursor: pointer;
-    flex-shrink: 0;
-    /* mos u zvogëlo kur s’ka hapësirë */
+    flex-shrink: 0;/* nk zvogelohet kur ska hapsire */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-     min-height: 540px; 
+    min-height: 540px; 
    
 }
 
 .card:hover {
-    transform: scale(1.05);
-    /* zmadhohet pak */
+    transform: scale(1.05); /* zmadhohet pak */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Imazhi i kartës */
+/* Imazhi i kartes */
 .image-container {
     position: relative;
     height: 200px;

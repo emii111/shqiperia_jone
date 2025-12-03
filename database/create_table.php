@@ -18,10 +18,10 @@ $sql_create_table_users = "CREATE TABLE users(
     last_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    role VARCHAR(255) NOT NULL
+    role VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP NULL,
-    uploaded_at TIMESTAMP NULL
+    updated_at TIMESTAMP NULL
 )";
 
 if (mysqli_query($conn, $sql_create_table_users)) {
@@ -43,7 +43,7 @@ $sql_create_table_reservations = "CREATE TABLE reservations(
     requests TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP NULL,
-    uploaded_at TIMESTAMP NULL
+    updated_at TIMESTAMP NULL
 )";
 
 if (mysqli_query($conn, $sql_create_table_reservations)) {
@@ -61,7 +61,7 @@ $sql_create_table_reviews = "CREATE TABLE reviews(
     stars INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP NULL,
-    uploaded_at TIMESTAMP NULL
+    updated_at TIMESTAMP NULL
     )";
 
 if (mysqli_query($conn, $sql_create_table_reviews)) {
