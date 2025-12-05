@@ -16,7 +16,7 @@
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
-            background: linear-gradient(135deg, #ff95bd, #cc0512);
+            background: #fed6e5ff;
             min-height: 100vh;
             display: inline;
             justify-content: center;

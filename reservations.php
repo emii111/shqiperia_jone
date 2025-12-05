@@ -26,9 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insert into database
     $sql = "INSERT INTO reservations 
-            (name, first_name, last_name, email, phone, preferred_date, guests, requests)
-            VALUES 
-            ('$name', '$first_name', '$last_name', '$email', '$phone', '$date', '$guests', '$requests')";
+        (first_name, last_name, email, phone, preferred_date, guests, requests)
+        VALUES 
+        ('$first_name', '$last_name', '$email', '$phone', '$date', '$guests', '$requests')";
+
 
     if (mysqli_query($conn, $sql)) {
         // Redirect after success

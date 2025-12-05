@@ -28,7 +28,7 @@ $select_reservations = "SELECT id, first_name, email, preferred_date, guests FRO
 $reservations = mysqli_query($conn, $select_reservations);
 
  // Fetch reviews data from the database
- $select_reviews = "SELECT id, first_name, comment, stars, created_at FROM reviews ";
+ $select_reviews = "SELECT id, name, comment, stars, created_at FROM reviews ";
  $reviews = mysqli_query($conn, $select_reviews);
 if (!$reviews) {
     die("Error: " . mysqli_error($conn));
@@ -80,6 +80,74 @@ if (!$reviews) {
             <?php endwhile; ?>
         </tbody>
     </table>
+    <h3>All Reviews | <a href="add_review.php">Add New Review</a></h3>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Stars</th>
+            <th>Comment</th>
+            <th>Product ID</th>
+            <th>Date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <?php while ($r = mysqli_fetch_assoc($reviews)) : ?>
+            <tr>
+                <td><?= $r['id'] ?></td>
+                <td><?= $r['name'] ?></td>
+                <td><?= $r['stars'] ?></td>
+                <td><?= $r['comment'] ?></td>
+                <td><?= $r['created_at'] ?></td>
+
+                <td><a href="edit_review.php?id=<?= $r['id'] ?>">Edit</a></td>
+                <td><a href="delete_review.php?id=<?= $r['id'] ?>" onclick="return confirm('Delete this review?')">Delete</a></td>
+            </tr>
+        <?php endwhile; ?>
+    </tbody>
+</table>
+<h3>All Reservations | <a href="add_reservation.php">Add New Reservation</a></h3>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Guests</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <?php while ($res = mysqli_fetch_assoc($reservations)) : ?>
+            <tr>
+                <td><?= $res['id'] ?></td>
+                <td><?= $res['first_name'] ?></td>
+                <td><?= $res['email'] ?></td>
+                <td><?= $res['preferred_date'] ?></td>
+                <td><?= $res['guests'] ?></td>
+
+                <td><a href="edit_reservation.php?id=<?= $res['id'] ?>">Edit</a></td>
+                <td>
+                    <a href="delete_reservation.php?id=<?= $res['id'] ?>" 
+                       onclick="return confirm('Are you sure you want to delete this reservation?')">
+                       Delete
+                    </a>
+                </td>
+            </tr>
+        <?php endwhile; ?>
+    </tbody>
+</table>
+
+
 </body>
 </html>
 

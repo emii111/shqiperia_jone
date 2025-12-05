@@ -8,6 +8,7 @@
 
     <!-- Ikonat e yjeve  -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<?php include "review_form.php"; ?>
 
     <style>
         .reviews-section {

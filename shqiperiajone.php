@@ -84,7 +84,7 @@
       
             <div class="slide"><img src="foto/destinacioni.jpg"><span>Oher</span></div>
             <div class="slide"><img src="foto/kotori.jpg"><span>Kotor</span></div>
-            <div class="slide"><img src="foto/Lago-di-Koman-Albania.jpg"><span>Komani</span></div>
+            <div class="slide"><img src="foto/Lago-di-Koman-Albania.jpg"><span>Koman</span></div>
             <div class="slide"><img src="foto/Gjipe-Beach.jpg"><span>Gjipe</span></div>
             <div class="slide"><img src="foto/prizren.webp"><span>Prizren</span></div>
             <div class="slide"><img src="foto/plava.jpg"><span>Plave</span></div>
@@ -94,7 +94,7 @@
            
             <div class="slide"><img src="foto/destinacioni.jpg"><span>Oher</span></div>
             <div class="slide"><img src="foto/kotori.jpg"><span>Kotor</span></div>
-            <div class="slide"><img src="foto/Lago-di-Koman-Albania.jpg"><span>Komani</span></div>
+            <div class="slide"><img src="foto/Lago-di-Koman-Albania.jpg"><span>Koman</span></div>
             <div class="slide"><img src="foto/Gjipe-Beach.jpg"><span>Gjipe</span></div>
             <div class="slide"><img src="foto/prizren.webp"><span>Prizren</span></div>
             <div class="slide"><img src="foto/plava.jpg"><span>Plave</span></div>
@@ -179,40 +179,41 @@
 
     <!-------------------------------------------------------------------modali------------------------------------------------------------------------->
     <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="closeModal" class="close">&times;</span>
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
 
-            <h2>Book Your Holiday</h2>
-           <form action="save_booking.php" method="POST">
+        <h2>Book Your Holiday</h2>
 
-                <label for="firstName">First Name *</label>
-                <input type="text" id="firstName" required>
+        <form action="save_booking.php" method="POST">
 
-                <label for="lastName">Last Name *</label>
-                <input type="text" id="lastName" required>
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="first_name" required>
 
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" required>
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="last_name" required>
 
-                <label for="phoneNumber">Phone Number *</label>
-                <input type="tel" id="phoneNumber" required>
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
 
-                <label for="preferredDate">Preferred Date *</label>
-                <input type="date" id="preferredDate" required>
+            <label for="phoneNumber">Phone Number *</label>
+            <input type="tel" id="phoneNumber" name="phone" required>
 
-                <label for="numberOfGuests">Number of Guests *</label>
-                <input type="number" id="numberOfGuests" required>
+            <label for="preferredDate">Preferred Date *</label>
+            <input type="date" id="preferredDate" name="preferred_date" required>
 
-                <label for="specialRequests">Special Requests</label>
-                <textarea id="specialRequests"></textarea>
+            <label for="numberOfGuests">Number of Guests *</label>
+            <input type="number" id="numberOfGuests" name="guests" required>
 
-                <div class="actions">
-                    <button type="submit" class="confirm-btn">Confirm Booking</button>
-                    <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
-                </div>
-            </form>
-        </div>
+            <label for="specialRequests">Special Requests</label>
+            <textarea id="specialRequests" name="requests"></textarea>
+
+            <div class="actions">
+                <button type="submit" class="confirm-btn">Confirm Booking</button>
+                <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+            </div>
+        </form>
     </div>
+</div>
 
 
 

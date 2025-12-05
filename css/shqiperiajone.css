@@ -72,7 +72,7 @@ body {
 
 /* Teksti poshtë nga e djathta */
 .heros p {
-  font-size: 35px;
+  font-size: 28px;
   opacity: 0;
   transform: translateX(100%);
   animation: slideInRight 1.5s ease-out forwards;
@@ -320,7 +320,7 @@ p.subtitle {
   bottom: 20px;
   left: 20px;
   color: white;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
