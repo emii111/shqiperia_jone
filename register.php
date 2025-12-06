@@ -4,10 +4,9 @@ $username = "root";
 $password = "";
 $dbname = "shqiperiajone_db";
 
-//create connection
+// Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-//check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -15,19 +14,19 @@ if (!$conn) {
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $email = $_POST['email'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $role = $_POST['role'];
 
-//inssert into users
-$sql = "INSERT INTO users (first_name, last_name, email, password, role) VALUES ('$first_name',' $last_name', '$email', '$password', '$role');";
+$password_hashed = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+$sql = "INSERT INTO users (first_name, last_name, email, password, role)
+        VALUES ('$first_name', '$last_name', '$email', '$password_hashed', '$role')";
 
 if (mysqli_query($conn, $sql)) {
-    // echo "User created succesfully";
-
-    // redirect to login page
-    header('Location: login.php');
+    header("Location: login.php");
+    exit();
 } else {
-    echo "Error:" . $sql .  "<br>" . mysqli_error($conn);
+    echo "Error: " . mysqli_error($conn);
 }
+
 mysqli_close($conn);
 ?>

@@ -14,12 +14,12 @@ if (!$conn) {
 $name = $_POST['name'];
 $comment = $_POST['comment'];
 $stars = $_POST['rating'];
-$product_id = $_POST['tour_id'];
+
 
 // Insert into reviews table
-$sql = "INSERT INTO reviews (name, comment, stars, product_id) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO reviews (name, comment, stars) VALUES (?, ?, ?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "ssdi", $name, $comment, $stars, $product_id);
+mysqli_stmt_bind_param($stmt, "ssdi", $name, $comment, $stars);
 
 if (mysqli_stmt_execute($stmt)) {
     header("Location: reviews.php");

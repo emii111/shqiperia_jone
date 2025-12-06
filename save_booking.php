@@ -1,4 +1,17 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "shqiperiajone_db";
+
+// Krijo lidhjen me DB
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Kontrollo lidhjen
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
 // Përfshin lidhjen me databazën
 include "shqiperiajone_db.php"; 
 
